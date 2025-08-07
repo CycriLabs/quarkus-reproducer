@@ -1,0 +1,32 @@
+### Get access token
+POST http://localhost:8080/realms/default/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id = app &
+grant_type = password &
+username = alice@maildrop.cc &
+password = alice
+
+> {%
+    client.global.set("accessToken", response.body["access_token"]);
+%}
+
+### Create receipt transaction
+POST http://localhost:3333/receipts/receipt-transaction
+Content-Type: multipart/form-data; boundary=boundary
+Accept: application/json
+Authorization: Bearer {{accessToken}}
+
+--boundary
+Content-Disposition: form-data; name="attachment"; filename="test.json"
+Content-Type: image/jpeg
+
+< ./test.json
+--boundary
+Content-Disposition: form-data; name="payload"
+Content-Type: application/json
+
+{
+    "name": "test.json"
+}
+--boundary

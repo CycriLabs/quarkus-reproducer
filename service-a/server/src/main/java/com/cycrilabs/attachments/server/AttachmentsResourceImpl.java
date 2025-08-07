@@ -40,6 +40,6 @@ public class AttachmentsResourceImpl implements AttachmentsResource {
 
     @Override
     public ReceiptDTO parse(final ParseReceiptMultipartFormDTO input) {
-        return null;
+        return new ReceiptDTO();
     }
 }

@@ -18,20 +18,8 @@
         <module>server</module>
     </modules>
 
-    <properties>
-        <quarkus.platform.version>3.25.0</quarkus.platform.version>
-    </properties>
-
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>io.quarkus.platform</groupId>
-                <artifactId>quarkus-bom</artifactId>
-                <version>${quarkus.platform.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
             <dependency>
                 <groupId>com.cycrilabs</groupId>
                 <artifactId>api-gateway-client</artifactId>
