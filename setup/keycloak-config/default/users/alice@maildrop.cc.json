@@ -1,0 +1,27 @@
+{
+    "access": {
+        "manageGroupMembership": true,
+        "view": true,
+        "mapRoles": true,
+        "impersonate": true,
+        "manage": true
+    },
+    "credentials": [
+        {
+            "type": "password",
+            "value": "alice"
+        }
+    ],
+    "disableableCredentialTypes": [],
+    "email": "alice@maildrop.cc",
+    "emailVerified": true,
+    "enabled": true,
+    "firstName": "Alice",
+    "lastName": "Drop",
+    "notBefore": 0,
+    "requiredActions": [],
+    "totp": false,
+    "username": "alice@maildrop.cc",
+    "realmRoles": [],
+    "clientRoles": {}
+}
