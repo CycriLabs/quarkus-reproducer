@@ -2,8 +2,8 @@
 
 # CLI flag variables
 STAGE=dev
-KEYCLOAK_CONFIGURE=true
-KEYCLOAK_EXPORT=true
+KEYCLOAK_CONFIGURE=false
+KEYCLOAK_EXPORT=false
 
 echo "Starting server with stage: $STAGE"
 
@@ -25,7 +25,7 @@ KEYCLOAK_CONFIGURATION_DIR="$CONFIG_DIR/$KEYCLOAK_CONFIGURATION_DIR_NAME"
 
 # Start dev services
 echo "Starting backing services..."
-docker compose up -d --wait
+docker compose up -d database consul --wait
 
 # Configure keycloak at first, it is required for exporting secrets later
 if $KEYCLOAK_CONFIGURE ; then

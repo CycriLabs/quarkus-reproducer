@@ -9,10 +9,7 @@ The projects consist of two Quarkus applications:
 - `service-a`: A simple REST service that provides two endpoints
 - `api-gateway`: An API gateway that routes requests to `service-a`
 
-The infrastructure uses Keycloak for authentication and authorization,
-`service-a` uses a PostgreSQL database.
-
-Routing is done by using Consul.
+`service-a` additionally uses a PostgreSQL database. Routing is done by using Consul.
 
 ## Usage
 
@@ -23,7 +20,7 @@ Routing is done by using Consul.
    ```
 2. Build the project:
    ```bash
-   mvnd clean package
+   ./mvnw clean package
    ```
 3. Run the setup script:
    ```bash

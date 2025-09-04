@@ -15,7 +15,7 @@ password = alice
 POST http://localhost:3333/receipts/receipt-transaction
 Content-Type: multipart/form-data; boundary=boundary
 Accept: application/json
-Authorization: Bearer {{accessToken}}
+#Authorization: Bearer {{accessToken}}
 
 --boundary
 Content-Disposition: form-data; name="attachment"; filename="test.json"
